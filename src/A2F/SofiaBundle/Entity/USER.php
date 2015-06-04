@@ -20,77 +20,77 @@ abstract class USER implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_LAST_NAME", type="string", length=255)
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_FIRSTNAME", type="string", length=255)
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_LANDLINE_PHONE_NUMBER", type="string", length=255)
      */
-    private $landLinePhoneNumber;
+    protected $landLinePhoneNumber;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_MOBILE_PHONE_NUMBER", type="string", length=255)
      */
-    private $mobilePhoneNumber;
+    protected $mobilePhoneNumber;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_EMAIL", type="string", length=255)
      */
-    private $email;
+    protected $email;
 
     /**
      * @var array
      *
      * @ORM\Column(name="USER_ROLES", type="array")
      */
-    private $roles;
+    protected $roles;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_SALT", type="string", length=255, nullable=true)
      */
-    private $salt;
+    protected $salt;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_USERNAME", type="string", length=255)
      */
-    private $username;
+    protected $username;
 
     /**
      * @var string
      *
      * @ORM\Column(name="USER_PASSWORD", type="string", length=255)
      */
-    private $password;
+    protected $password;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="USER_LIVE", type="boolean")
      */
-    private $live;
+    protected $live;
     
     public function __construct() 
         {

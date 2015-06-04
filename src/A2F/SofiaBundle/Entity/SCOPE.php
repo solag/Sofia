@@ -18,7 +18,7 @@ class SCOPE
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -32,28 +32,28 @@ class SCOPE
      *
      * @ORM\Column(name="SC_SIZE", type="string", length=255)
      */
-    private $size;
+    protected $size;
 
     /**
      * @var string
      *
      * @ORM\Column(name="SC_NOTES", type="text")
      */
-    private $notes;
+    protected $notes;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="SC_LIVE", type="boolean")
      */
-    private $live;
+    protected $live;
 
     /**
      * @var CRITICALITY
      * @ORM\ManyToOne(targetEntity="CRITICALITY")
      * @ORM\JoinColumn(name="CRIT_ID", referencedColumnName="CRIT_ID", nullable=false)
      */
-    private $criticality;
+    protected $criticality;
     
     /**
      *
@@ -61,7 +61,7 @@ class SCOPE
      * @ORM\ManyToOne(targetEntity="CLIENT")
      * @ORM\JoinColumn(name="SC_CLT_ID", referencedColumnName="CLT_ID", nullable=false)
      */
-    private $client;
+    protected $client;
 
     
 
