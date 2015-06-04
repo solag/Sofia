@@ -1,5 +1,10 @@
 
          <div class="row accordionHeader">
+                {% if(app.request.attributes.get('_route') == 'a2fSofia_user_detail') %}
+            <div class="col-xs-1 accordionNeutral">
+             
+            </div>
+            {% endif %}
              <div class="col-xs-2 accordionLabel">
                  {{element.firstName}} {{element.lastName|upper}}
              </div>
@@ -10,6 +15,9 @@
                     {{ element.trigraph }}
                 {% endif %}
              </div>
+                {% if(app.request.attributes.get('_route') != 'a2fSofia_user_detail') %}
+           
+            
              {% if element.live %}
              <div class="col-xs-offset-3 col-xs-1 accordionPicto">
                  <img alt="Actif" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusGreen.png") }}" />
@@ -25,6 +33,7 @@
                     Inactif
                 </div>
             {% endif %} 
+            {% endif %}
         </div>
         <div class="row accordionBody">
             <div class="col-xs-12">

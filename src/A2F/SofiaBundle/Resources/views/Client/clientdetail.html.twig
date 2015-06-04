@@ -24,9 +24,9 @@
                 </div>
             </div>
         </div>
-        
+        <section class="col-xs-12">
         {% include ("A2FSofiaBundle:Client:clientview.html.twig") %}
-          
+        </section>  
     </div>
         {% render(controller("A2FSofiaBundle:Contract:list", {"id": app.user.client.id})) %}
         {% render(controller("A2FSofiaBundle:User:list", {"id": app.user.client.id, "type":"REQUESTER"})) %}

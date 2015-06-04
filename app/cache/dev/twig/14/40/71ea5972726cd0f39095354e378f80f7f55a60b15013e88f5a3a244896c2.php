@@ -66,12 +66,12 @@ class __TwigTemplate_144071ea5972726cd0f39095354e378f80f7f55a60b15013e88f5a3a244
                 </div>
             </div>
         </div>
-        
+        <section class=\"col-xs-12\">
         ";
         // line 28
         $this->loadTemplate("A2FSofiaBundle:Client:clientview.html.twig", "A2FSofiaBundle:Client:clientdetail.html.twig", 28)->display($context);
         // line 29
-        echo "          
+        echo "        </section>  
     </div>
         ";
         // line 31
