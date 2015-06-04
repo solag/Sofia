@@ -1,0 +1,25 @@
+{% extends ("A2FSofiaBundle::layout.html.twig") %}
+
+{% block content %}
+    <div class="row">
+       <div class="col-xs-12">
+           <div class="row">
+               <div class="col-xs-12 sectionHeader">
+                   <div id="boxPicto..." class="col-xs-1">
+                       <img id="picto..." class="picto" alt="..." src="{{ asset("bundles/a2fsofia/images/....png") }}" />
+                   </div>
+                   <div class="col-xs-11">
+                       <h3>Titre de la section</h3>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <section class="col-xs-12">
+                   {#{% for element in elements %}#}
+                       {% include ("A2FSofiaBundle:Répertoire:vue.html.twig") %}
+                   {#{% endfor %}#}
+            </section></div>
+       </div>
+   </div>    
+{% endblock content %}

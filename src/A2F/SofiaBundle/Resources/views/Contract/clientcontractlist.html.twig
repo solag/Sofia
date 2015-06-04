@@ -1,0 +1,16 @@
+{# liste des contrats affichés dans le profil de l'entreprise lorsque c'est le client qui est connecté #}
+{#{% for contract in contracts %}#}
+    <div class="row">
+        <div class="col-xs-12">
+            {% include ("A2FSofiaBundle:Contract:contractsectionheader.html.twig") %}
+            {% include("A2FSofiaBundle:Contract:clientcontractview.html.twig") %}
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-xs-12 fullList">
+                <a href="#">Liste complète</a>
+            </div>
+    </div>
+{#{% endfor %}#}
+
+

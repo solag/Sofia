@@ -1,0 +1,41 @@
+{% extends "A2FSofiaBundle::layout.html.twig" %}
+
+{% block breadcrumbs %}
+    {{parent()}} >  {% if is_granted("ROLE_REQ") %}
+        <a href="{{path("a2fSofia_user_detail", {"id": app.user.id, "type": "REQUESTER"})}}">Profil du demandeur</a>
+                                                {% else %}    
+                                                <a href="{{path("a2fSofia_user_detail", {"id": app.user.id, "type": "DBA"})}}">Profil du DBA</a>
+                                                {%endif%}
+{% endblock breadcrumbs %}
+
+{% block content %}
+    
+        
+    <div class="row">
+       <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div class="row">
+                        <div class="col-xs-11 no-padding">
+                            <div class="col-xs-1 boxPictoHeader">
+                                <img id="pictoUser" class="picto" alt="Profil demandeur" src="{{ asset("bundles/a2fsofia/images/User.png") }}" />
+                            </div>
+                            <div class="col-xs-11">
+                                 <h3>{% if is_granted("ROLE_DBA") %}
+                                        DBA
+                                    {% else %}
+                                        Demandeur
+                                    {% endif %}
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="col-xs-12">
+        {% include ("A2FSofiaBundle:User:userview.html.twig") %}
+        </section>  
+    </div>
+        
+{% endblock content %}

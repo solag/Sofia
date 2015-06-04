@@ -1,0 +1,87 @@
+
+         <div class="row accordionHeader">
+             <div class="col-xs-2 accordionLabel">
+                 {{element.firstName}} {{element.lastName|upper}}
+             </div>
+             <div class="col-xs-offset-2 col-xs-2">
+                 {% if type == "REQUESTER" %}
+                    {{ element.position }}
+                {% else %}
+                    {{ element.trigraph }}
+                {% endif %}
+             </div>
+             {% if element.live %}
+             <div class="col-xs-offset-3 col-xs-1 accordionPicto">
+                 <img alt="Actif" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusGreen.png") }}" />
+             </div>
+             <div class="col-xs-1 accordionStatus">
+                 Actif
+             </div>
+             {% else %}
+                 <div class="col-xs-offset-3 col-xs-1 accordionPicto">
+                    <img alt="Inactif" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusRed.png") }}" />
+                </div>
+                <div class="col-xs-1 accordionStatus">
+                    Inactif
+                </div>
+            {% endif %} 
+        </div>
+        <div class="row accordionBody">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-11 accordionLine">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Téléphone fixe
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.landLinePhoneNumber }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                 <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Téléphone mobile
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.mobilePhoneNumber }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Email
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.email }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-xs-1 boxPictoUpdate">
+                <a href="#">
+                    <img alt="Modifier" class="miniPicto" src="{{ asset("bundles/a2fsofia/images/Update.png") }}" />
+                </a>
+            </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                {% if is_granted("ROLE_DBA") and type=="REQUESTER"%}
+                {% include("A2FSofiaBundle::notes.html.twig") %}
+                {% endif %}
+            </div>
+        </div>
+    
+
+
+    
+
+
+

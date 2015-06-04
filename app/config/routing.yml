@@ -1,0 +1,13 @@
+a2f_sofia:
+    resource: "@A2FSofiaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    path: /login
+    defaults: {_controller:A2FSofiaBundle:Security:login}
+    
+login_check:
+    path: /login_check
+    
+logout:
+    path: /logout

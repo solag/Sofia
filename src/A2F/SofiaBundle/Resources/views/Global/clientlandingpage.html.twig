@@ -1,0 +1,65 @@
+{% extends "A2FSofiaBundle::layout.html.twig" %}
+
+{% block breadcrumbs %}
+    <a href="{{path("a2fSofia_clientlandingpage", { id: app.user.client.id} ) }} ">Accueil</a>
+{% endblock breadcrumbs %}
+
+{% block content %}
+
+  
+<div class="col-xs-12">
+    <div class="row">
+        <div id="blocStats" class="col-xs-3">
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div id="boxPictoStats" class="col-xs-1">
+                        <img id="pictoStats" class="picto" alt="Statistiques des incidents" src="{{ asset("bundles/a2fsofia/images/Stats.png") }}" />
+                    </div>
+                    <div id="boxStats" class="col-xs-11">
+                        <h3>Aperçu</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% include ("A2FSofiaBundle:Incident:incidentstats.html.twig") %}
+            </div>
+        </div>
+
+        <div id="blocMessages" class="col-xs-offset-1 col-xs-8">   
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div id="boxPictoMessage" class="col-xs-1">
+                        <img id="pictoMessage" class="picto" alt="Messages" src="{{ asset("bundles/a2fsofia/images/Mail.png") }}" />
+                    </div>
+                    <div id="boxNotifications" class="col-xs-11">
+                        <h3>Notifications</h3>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                   {% include ("A2FSofiaBundle:Notification:notificationlist.html.twig") %}
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+          {% render(controller("A2FSofiaBundle:Incident:list", {"id": app.user.client.id, "limit": 5})) %}
+          
+        
+            
+        
+    </div>    
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+     <script type="text/javascript">
+    $(document).ready(function() {
+    $( ".selector" ).accordion();
+
+    $( "#accordion" ).accordion();
+    
+});
+</script>
+
+{% endblock javascripts %}

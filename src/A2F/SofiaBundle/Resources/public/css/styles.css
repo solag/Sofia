@@ -1,0 +1,768 @@
+/*----------------------------------------Global-----------------------------------------------------------*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: calibri;
+    background: url("../images/BG.png") no-repeat center fixed;
+    background-size: cover;
+    min-height: 100%;
+    
+}
+.accordionClosed
+{
+    background: url("../images/DropDownClosed.png") no-repeat center !important;
+    background-size: 15px 15px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.accordionOpen
+{
+    background: url("../images/DropDownOpen.png") no-repeat center !important;
+     background-size: 15px 15px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.accordionNeutral
+{
+    background-color: inherit;
+    background-size: 15px 15px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    margin: 0;
+  
+}
+
+html
+{
+    min-height: 100%;
+}
+
+#global
+{
+    min-height: 100%;
+    padding: 0;
+}
+
+.picto
+{
+    width: 30px;
+    
+}
+
+.miniPicto
+{
+    width: 20px;
+    padding: 8px 0 0 0;
+}
+
+/*----------------------------------------Header & Footer-----------------------------------------------------------*/
+header
+{
+    color: #FFF;
+}
+
+#boxPictoHome
+{
+    padding: 0;
+    text-align: left;
+}
+
+#boxPictoUser
+{
+    padding: 0;
+    text-align: right;
+}
+#boxPictoLogout
+{
+    padding: 0;
+    text-align: right;
+}
+#boxNextWorkShop
+{
+    text-align: center;
+}
+
+#nextWorkShop
+{
+    margin: 1.5% 0 1.5% 0;
+}
+#banner, #navBar
+{
+    padding: 0.5% 0px 0.1% 0px;
+    border-bottom: 2px solid #FFF;
+}
+#logoA2F, #logoOracle
+{
+    width: 120px;
+    box-sizing: border-box;
+}
+
+#logoA2F
+{
+    padding: 5% 0 0 5%;
+}
+
+#logoOracle
+{
+    padding: 15% 0 0 5%;
+}
+
+#boxLogoA2F
+{
+    text-align: left;
+}
+
+#boxLogoOracle
+{
+    text-align: right;
+}
+
+#boxPictoHome
+{
+    padding: 0;
+    text-align: left;
+}
+
+#boxPictoUser
+{
+    padding: 0;
+    text-align: right;
+}
+#boxPictoLogout
+{
+    padding: 0;
+    text-align: right;
+}
+
+#pictoHome
+{
+    margin: 0 0 5%;
+    width: 28px;
+}
+
+#pictoLogout
+{
+    width: 25px;
+    margin: 0 0 5%;
+}
+
+#pictoUser
+{
+    width: 25px;
+    margin: 0 0 1%;
+}
+
+nav li, footer li
+ {
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    border-right: 2px solid #FFF;
+ }
+ 
+nav li a, footer li a, #menuCompanyName a, #menuContractType, #identifiant a
+{
+     color:#fff;
+}
+
+nav ul li a:hover, footer ul li a:hover, #menuCompanyName a:hover, #menuContractType:hover, #identifiant a:hover
+{
+    color: #FA0000;
+    text-decoration: none;
+}
+ 
+ nav ul li:last-child, footer ul li:last-child
+ {
+     border-right: 0;
+ }
+ 
+ 
+ 
+nav
+ {
+     font-size: 110%;
+ }
+ footer
+ {
+    position: relative;
+    clear: both;
+    font-size: 12px;
+    margin-top: -0.45%;
+    height: 3%;
+     
+ }
+ 
+ nav
+ {
+     padding: 0.5% 0 0 0;
+     vertical-align: middle;
+ }
+ 
+ .navContainer
+ {
+     padding: 0;
+ }
+ #identifiant
+ {
+     padding: 0.35% 0 0 1.5%;
+     text-align: left;
+     font-size: 100%;
+ }
+ 
+ #menuCompanyName
+ {
+     padding: 0;
+     margin: 0;
+     font-size: 80%
+ }
+/*----------------------------------------Main-----------------------------------------------------------*/
+
+.breadcrumbs
+{    
+    padding: 0.5% 0 0.5% 0;
+}
+
+.breadcrumbs a, .breadcrumbs
+{
+    color: #FFF;
+}
+
+#main
+{
+    overflow: auto;
+    padding: 0 0 0.45% 0;
+}
+#content
+{
+    margin-top: 0.2%;
+    min-height: 100%;
+}
+
+#topMain
+{
+    min-height: 540px;
+}
+
+section
+{
+    padding: 0 0 10px 0;
+    margin: 10px 0 20px 0;
+    color: #10253F;
+    background-color: #FFF;
+    min-height: 200px;
+    text-align: center;
+   
+}
+
+.no-padding
+{
+    padding: 0;
+}
+
+.no-margin
+{
+    margin: 0;
+}
+
+h3
+{
+    padding: 0 0 5px 5px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 30px;
+}
+
+
+#boxPictoStats, #boxPictoIncident, #boxPictoContract, #boxPictoBase, .boxPictoHeader
+{
+    text-align: left;
+    padding: 0;
+}
+ 
+#boxPictoIncident, #boxPictoContract,#boxPictoMessage, #boxPictoBase, .boxPictoHeader
+{
+    width: 33px;
+    
+}
+
+#boxStats
+{
+    padding-left: 4%;
+}
+
+#boxPictoMessage
+{
+   padding: 0.5% 0 0 0;
+}
+
+
+
+#boxNotifications
+{
+    padding: 0 0 0 1px;
+}
+
+.statsColonneIncidents
+{
+    text-align: left;
+}
+
+.statsColonneNombre
+{
+    text-align: right;
+}
+
+ul li
+{
+    list-style-type: none;
+}
+
+
+.message
+{
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.boxMiniPictoListeMessages
+{
+    text-align: left;
+    height: 30px;
+}
+
+
+#statsIncidents row section
+{
+    padding: 10px 8px 10px 8px;
+    
+    
+}
+
+.ligneListe
+{
+    line-height: 23px;
+}
+
+
+
+#blocStats
+{
+    
+}
+
+#blocMessages
+{
+    
+}
+
+#headerMessages
+{
+   
+}
+
+.sectionHeader
+{
+   padding: 0;
+   margin-top: 15px;
+   
+}
+
+.row
+{
+    padding: 0;
+    margin: 0;
+}
+#colonnePictosMessages
+{
+    padding: 0 0 0 2%;
+}
+.fullList, .toDetailedView
+{
+    text-align: right;
+}
+
+.fullList
+{
+    margin-top: -15px;
+    vertical-align: top;
+}
+
+
+.fullList a
+{
+    color: #FFF;
+}
+
+.statusPicto
+{
+   padding: 1% 0 3% 0;
+   
+}
+
+.accordionHeader
+{
+    font-weight: bold;
+    
+    line-height: 30px;
+    padding: 0;
+    border-bottom: 1px solid silver;
+}
+
+.accordionBody
+{
+    border-bottom: 1px solid silver;
+    padding: 10px 10px 0px 10px;
+    
+}
+
+.col-xs-11, .col-xs-12, .col-xs-5, #blocStats, #blocMessages
+{
+    padding: 0;
+    
+}
+
+.accordionLabel
+{
+    text-align: left;
+}
+
+.accordionStatus
+{
+    text-align: left;
+}
+
+.accordionLabel
+{
+   padding: 0 0 0 0px;
+}
+
+.accordionStatus
+{
+    padding-top: 2px;
+}
+.accordionPicto
+{
+    text-align: right;
+    padding: 0;
+    
+}
+
+.accordionSummary
+{
+    padding: 0 0 0 10px;
+    height: 40px;
+}
+
+.accordionLine
+{
+    padding: 0;
+}
+
+.accordionSummaryHeader, .accordionSummaryContent
+{
+    text-align: left;
+}
+
+.accordionSummaryHeader
+{
+    font-weight: bold;
+}
+
+.accordionSummaryContent
+{
+    text-align: justify;
+}
+
+
+
+.accordionStar
+{
+    padding: 0;
+    text-align: left;
+    
+}
+
+#pictoStar
+{
+    padding: 0 0 1% 0;
+}
+
+#creditRestant
+{
+    margin-left: 0;
+}
+
+.boxPictoAjouterHeader
+{
+
+    text-align: right;
+    padding: 0;
+}
+
+#accordionHeaderContractType
+{
+    text-align: center;
+}
+
+.boxPictoUpdate
+{
+    text-align: right;
+    padding: 0;
+}
+
+.boxPictoHeaderHorizontal
+{
+    margin-top: 2px;
+}
+
+
+
+.ProgressBar {
+    
+    width: 100%;
+    background: #FFF;
+    border: 1px solid #10253F;
+    height: 15px;
+}
+
+.ProgressBar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.ProgressBar[data-length="10"]:after 
+{ 
+    width: 10%;
+    background: #b91e1e;
+}
+.ProgressBar[data-length="20"]:after 
+{ 
+    width: 20%;
+    background: #fa6000;
+}
+.ProgressBar[data-length="30"]:after 
+{ 
+    width: 30%;
+    background: #fa6000;
+}
+.ProgressBar[data-length="40"]:after 
+{ 
+    width: 40%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="50"]:after 
+{ 
+    width: 50%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="60"]:after 
+{ 
+    width: 60%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="70"]:after 
+{ 
+    width: 70%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="80"]:after 
+{ 
+    width: 80%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="90"]:after 
+{ 
+    width: 90%;
+    background: #7db35d;
+}
+.ProgressBar[data-length="100"]:after 
+{ 
+    width: 100%;
+    background: green;
+}
+
+.boxProgressBar
+{
+    margin: 1.5% 0 0 0;
+    padding: 0.5% 0.5% 0 2.5%;
+    text-align: right;
+}
+
+.menuBoxProgressBar .ProgressBar
+{
+    height: 12px;
+}
+
+.menuBoxProgressBar
+{
+    margin-top: -3%;
+    padding: 0 0.5% 0 0.5%;
+    text-align: right;
+    line-height: 12px;
+}
+
+.menuBoxContractType
+{
+    margin: 0;
+    padding: 0 3.5% 0 0.5%;
+    text-align: left;
+    line-height: 12px;
+}
+
+.boxContractType
+{
+    margin: 1.5% 0 0 0;
+    padding: 0 0.5% 0 3.5%;
+    text-align: right;
+    line-height: 15px;
+}
+
+.menuBoxProgressBar:last-child
+{
+    padding-top: 3.5%;
+}
+
+.menuBar
+{
+    padding: 0.25% 0 0 0;
+    margin: 0;
+}
+
+.btn
+{
+    background-color: #10253F;
+    height: 23px;
+    padding: 0;    
+    margin-top: 8px;
+    width: 100px;
+}
+
+.btn[value="Connexion"]
+{
+    width: 95px;
+}
+
+.toDetailedView
+{
+    padding: 0 10px 0 0;   
+    
+}
+
+.toDetailedView a
+{
+    color:#FFF;;   
+}
+
+.toDetailedView a:hover, .flashBag, .breadcrumbs a:hover
+{
+    color: #FA0000; 
+    text-decoration: none;
+}
+
+.accordionSummaryContent ul li
+{
+   text-align: center;
+   display: inline-block;
+   border-right: 1px solid #10253F;
+   padding-right: 4px;
+   line-height: 20px;
+}
+
+.accordionSummaryContent ul
+{
+    margin: 0;
+}
+
+.accordionSummaryContent ul li:last-child
+{
+    border-right: 0;
+}
+
+.accordionSummaryContent ul li a
+{
+    color: #10253F;
+}
+.accordionSummaryContent ul li a:hover
+{
+    color: #FA0000;
+    text-decoration: none;
+}
+
+#loginForm
+{
+    padding-top: 5%;
+}
+
+.loginFormLabel
+{
+    text-align: right;
+}
+
+.formLabel
+{
+    vertical-align: middle;
+}
+
+.formLine
+{
+    padding-bottom: 2%;
+}
+
+#boutonConnexion
+{
+    color: #FFF;
+}
+
+#boutonConnexion:hover
+{
+    color: #FA0000;
+}
+
+input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#loginSection
+{
+    margin: 15% 0 16%;
+}
+
+
+
+.messageVide
+{ 
+    height: 100px;
+    padding-top: 30px;
+}
+
+.microPicto
+{
+    width : 15px;
+    padding : 0;
+    
+}
+
+.boxMicroPicto
+{
+    text-align: left;
+}

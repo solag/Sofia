@@ -1,0 +1,85 @@
+{# Un contrat tel que A2F le voit dans sa landing page. A inclure dans "a2fcontractlist" #}
+
+    
+        <div class="row accordionHeader">
+             <div class="col-xs-3 accordionLabel">
+                 {{contract.startDate|date('Y')}}-{{contract.endDate|date('Y')}} - {{contract.client.companyName}}
+             </div>
+             <div class="col-xs-1 accordionStar">
+                 {% if contract.gti.code == "1h" %}
+                     <img id="pictoStar" alt="star" class="miniPicto" src="{{ asset("bundles/a2fsofia/images/star.png") }}" />
+                 {% endif %}
+             </div>
+             <div id="creditRestant" class="col-xs-offset-1 col-xs-4">
+                 Crédit restant: {{ contract.initialCredit-contract.spentCredit }}
+             </div>
+             <div class="col-xs-offset-1 col-xs-1 accordionPicto">
+                 {% if contract.contractType.code == "ETO" %}
+                    <img alt="ETO" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusGreen.png") }}" />
+                 {% else %}
+                     <img alt="" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusOrange.png") }}" />
+                 {% endif %}
+             </div>
+             <div class="col-xs-1 accordionStatus">
+                 {{ contract.contractType.code }}
+             </div>
+        </div>
+             
+        <div class="row accordionBody">
+            <div class="col-xs-8 accordionLine">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6 accordionLine">
+                            <div class="row">
+                                <div class="col-xs-12 accordionSummaryHeader">
+                                    Date de début
+                                </div>
+                                <div class="col-xs-12 accordionSummaryContent">
+                                    {{ contract.startDate|date("d/m/Y")}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 accordionLine">
+                             <div class="row">
+                                <div class="col-xs-12 accordionSummaryHeader">
+                                    Date de fin
+                                </div>
+                                <div class="col-xs-12 accordionSummaryContent">
+                                    {{ contract.endDate|date("d/m/Y") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 accordionLine">
+                {#{% include ("A2FSofiaBundle:Global:progressbar.html.twig") %}#}
+            </div>
+           <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 accordionSummaryHeader">
+                    Remarques
+                </div>
+                <div class="col-xs-12 accordionSummaryContent">
+                    {{ contract.notes }}
+                </div>
+            </div>
+            </div>
+            <div class="col-xs-12 toDetailedView">
+                <a href="#"/>Profil client</a>
+            </div>
+        </div>
+            
+        
+    
+            
+            
+   
+     
+
+
+    
+
+
+
+

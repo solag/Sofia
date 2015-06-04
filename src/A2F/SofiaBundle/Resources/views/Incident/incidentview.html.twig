@@ -1,0 +1,134 @@
+
+         <div class="row accordionHeader">
+             <div class="col-xs-2 accordionLabel">
+                 Incident {{ element.id }}
+             </div>
+             <div class="col-xs-8">
+                
+                 {% if element.database|length != 0 %}
+                     {% if is_granted("ROLE_DBA") %}{{ element.database.client.companyName }} - {% endif %}{{ element.database.name }}
+                    
+                 {% else %}
+                    
+                           
+                        {% if is_granted("ROLE_DBA") %}{{ element.server.client.companyName }} - {% endif %} {{ element.server.name }}
+                       
+                {% endif %}
+             </div>
+                
+           {#   {% if element.statusT[0].status.category.name == "Nouveau" %}
+                <div class="col-xs-1 accordionPicto">
+                    <img alt="Clos" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusRed.png") }}" />
+                </div>
+                <div class="col-xs-1 accordionStatus">
+                    {{ element.statusT[0].status.category.name }}
+                </div>
+            {% endif %}#}
+             {#    {{ dump(element.statusT[41].status.name) }}#}
+{#                {{ dump(incident.statusT.status.name) }}
+              
+                
+            {#  {% elseif incident.statusT[0].status.category.name == "En cours" %}
+                 <div class="col-xs-offset-8 col-xs-1 accordionPicto">
+                    <img alt="En cours" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusOrange.png") }}" />
+                </div>
+                <div class="col-xs-1 accordionStatus">
+                    En cours
+                </div>
+             {% elseif incident.statusT == "Nouveau" %}
+                 <div class="col-xs-offset-8 col-xs-1 accordionPicto">
+                    <img alt="Nouveau" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusRed.png") }}" />
+                </div>
+                <div class="col-xs-1 accordionStatus">
+                    Nouveau
+                </div>
+            {% endif %}
+                #}
+        </div>
+      <div class="row accordionBody">
+            <div class="col-xs-6 accordionLine ">
+                <div class="row">
+                    <div class="col-xs-12 accordionSummaryHeader">
+                        Date de la demande
+                    </div>
+                    <div class="col-xs-12 accordionSummaryContent">
+                        {{ element.logDate|date("d/m/Y") }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 accordionLine">
+                 <div class="row">
+                    <div class="col-xs-12 accordionSummaryHeader">
+                        Date de prise en charge
+                    </div>
+                    <div class="col-xs-12 accordionSummaryContent">
+                        {% if element.acknowledgeDate is null %}
+                            Votre incident est en attente de prise en charge.
+                        {% else %}
+                            {{ element.acknowledgeDate|date("d/m/Y") }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 accordionLine">
+                 <div class="row">
+                    <div class="col-xs-12 accordionSummaryHeader">
+                        Demandeur
+                    </div>
+                    <div class="col-xs-12 accordionSummaryContent">
+                        {{ element.requester.firstName }} {{ element.requester.lastName|upper }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 accordionLine">
+                 <div class="row">
+                    <div class="col-xs-12 accordionSummaryHeader">
+                        Intervenant
+                    </div>
+                    <div class="col-xs-12 accordionSummaryContent">
+                        {% if element.dba|length!=0 %}
+                        {{ element.dba.firstName }} {{ element.dba.lastName|upper }}
+                        {% else %}
+                            Votre incident est en attente de prise en charge.
+                        {% endif %}
+                            
+                    </div>
+                </div>
+            </div>
+           <div class="col-xs-6 accordionLine">
+              
+                    <div class="row">
+                        <div class="col-xs-12 accordionSummaryHeader">
+                            Description
+                        </div>
+                        <div class="col-xs-12 accordionSummaryContent">
+                            {{ element.description|slice(0,90) }}...
+                        </div>
+                    </div>
+            </div>
+            <div class="col-xs-6 accordionLine">
+                <div class="row">
+                    {% if is_granted("ROLE_DBA") %}
+                    <div class="col-xs-9 toDetailedView">
+                        <a class="btn" href="{{path("a2fSofia_incident_assign", {"incidentId" : element.id}) }}">Prendre en charge</a>
+                    </div>
+                    <div class="col-xs-3 toDetailedView">
+                        <a class="btn" href="#">Fiche complète</a>
+                    </div>
+                    {% else %}
+                        <div class="col-xs-offset-9 col-xs-3 toDetailedView">
+                        <a class="btn" href="#">Fiche complète</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+   
+       
+  
+     
+
+
+    
+
+

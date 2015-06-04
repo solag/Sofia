@@ -1,0 +1,26 @@
+{% extends "A2FSofiaBundle::layout.html.twig" %}
+
+{% block breadcrumbs %}
+    {{parent()}} > <a href="{% if app.user.client is defined %}{{path("a2fSofia_incident_full_list", {"id": app.user.client.id} )}} {% else %} {{path("a2fSofia_incident_full_list", {"id": null} )}}{%endif%}">Liste complète des incidents</a>
+{% endblock breadcrumbs %}
+
+{% block content %}
+    
+    {% include ("A2FSofiaBundle:Incident:incidentlist.html.twig") %}
+                
+{% endblock content %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+     <script type="text/javascript">
+    $(document).ready(function() {
+    $( ".selector" ).accordion();
+
+    $( "#accordion" ).accordion();
+    
+});
+</script>
+
+{% endblock javascripts %}

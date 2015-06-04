@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-12">
+    <ul class="menuBar">
+        <li class="col-xs-3">
+            <a href="{{ path("a2fSofia_incident_add") }}">Nouvel Incident</a>
+        </li>
+        <li class="col-xs-2">
+            <a href="{{path("a2fSofia_incident_full_list", {"id": app.user.client.id})}}">Incidents</a>
+        </li>
+        <li class="col-xs-2"> 
+            <a href="{{ path("a2fSofia_client_detail", {"id": app.user.client.id, "type": "REQUESTER"} ) }}#userHeader">Demandeurs</a>
+        </li>  
+        <li class="col-xs-2"> 
+            <a href="{{ path("a2fSofia_scope_list", {"id": app.user.client.id, "limit":5}) }}">Périmètre</a>
+            
+        </li> 
+    </ul> 
+   
+        <div class="col-xs-3 no-padding no-margin">
+            
+                {% for element in elements %}
+                    <a id="menuContractType" href ="{{ path("a2fSofia_client_detail", {"id": app.user.client.id, "type": "REQUESTER"} ) }}#contractHeader">
+                    <div class="row">
+                    <div class="col-xs-2 {% if elements|length>1 %} menuBoxContractType {% else %} boxContractType {% endif %}">
+                        {{element.contractType.code}}
+                    </div>
+                    <div class="col-xs-10 {% if elements|length>1 %}menuBoxProgressBar {% else %} boxProgressBar {% endif %}">
+                        {% include ("A2FSofiaBundle:Global:progressbar.html.twig") %}
+                    </div>
+                    </div>
+                    </a>
+                {% endfor %}
+                
+            
+        </div>
+    
+    </div>
+</div>   

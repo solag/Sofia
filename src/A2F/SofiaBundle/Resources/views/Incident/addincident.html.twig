@@ -1,0 +1,29 @@
+{% extends "A2FSofiaBundle::layout.html.twig" %}
+
+{% block breadcrumbs %}
+    {{parent()}} > <a href="{{path("a2fSofia_incident_add")}}">Nouvel incident</a>
+{% endblock breadcrumbs %}
+
+{% block content %}
+    <section>
+        {{ form_start(incidentForm) }}
+            {{ form_errors(incidentForm) }}
+            
+            <div class="row" id="loginForm"> 
+                <div class="col-xs-12">
+                    <div class="row">
+                        {{ form_label(incidentForm.description, "Description", {"label_attr": {"class": "col-xs-offset-3 col-xs-2" }}) }}
+                        {{ form_widget(incidentForm.description, { "attr": {"placeholder": "Description de l'incident", "class": "col-xs-4"} }) }}
+                        {{ form_errors(incidentForm.description) }}
+                    </div>
+                    <div class="row">
+                        {{ form_label(incidentForm.database, "database", {"label_attr": {"class": "col-xs-offset-3 col-xs-2" }}) }}
+                        {{ form_widget(incidentForm.database, { "attr": {"placeholder": "Périmètre affecté", "class": "col-xs-4"} }) }}
+                        {{ form_errors(incidentForm.database) }}
+                    </div>
+                </div>
+            </div>
+        
+        {{ form_end(incidentForm) }}
+    </section>
+{% endblock content %}

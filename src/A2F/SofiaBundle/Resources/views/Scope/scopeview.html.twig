@@ -1,0 +1,124 @@
+
+
+
+        <div class="row accordionHeader">
+            
+            
+            
+             <div class="col-xs-1 accordionLabel">
+                 {{ element.name }}
+             </div>
+        {% if element.live %}
+             <div class="col-xs-offset-8 col-xs-1 accordionPicto">
+                 <img alt="Active" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusGreen.png") }}" />
+             </div>
+             <div class="col-xs-1 accordionStatus">
+                 Active
+             </div>
+        {% else %}
+            <div class="col-xs-offset-8 col-xs-1 accordionPicto">
+                 <img alt="Inactive" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusRed.png") }}" />
+             </div>
+             <div class="col-xs-1 accordionStatus">
+                 Inactive
+             </div>
+        {% endif %}
+        </div>
+        <div class="row accordionBody">
+           
+                    <div class="col-xs-11 accordionLine"
+                         <div class="row">
+                            <div class="col-xs-6 accordionLine">
+                                <div class="row">
+                                    {% if element.server is defined %}
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Serveur
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.server.name }}
+                                    </div>
+                                    {% else %}
+                                         <div class="col-xs-12 accordionSummaryHeader">
+                                            Bases de données
+                                        </div>
+                                        <div class="col-xs-12 accordionSummaryContent">
+                                            <ul>
+                                            {% for db in element.dbs %}
+                                                <li><a href="#">{{ db.name }}</a></li>
+                                            {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-xs-6 accordionLine">
+                                 <div class="row">
+                                    {% if element.dbms is defined %}
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Version
+                                    </div>
+                                
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.dbms.name }}
+                                    </div>
+                                {% else %}
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Système d'exploitation
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.os.name }}
+                                    </div>
+                                {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-xs-6 accordionLine">
+                                 <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Criticité
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.criticality.level }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 accordionLine">
+                                 <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Taille
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.size }}
+                                    </div>
+                                </div>
+                            </div>
+                            {#
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Nombre d'incidents
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        5
+                                    </div>
+                                </div>
+                            </div>
+                            #}
+                        </div>
+                    <div class="col-xs-1">
+                        <div class="row">
+                            <div class="col-xs-12 toDetailedView">
+                                <a href="#"/>
+                                    <img id="pictoUpdate" class="miniPicto" alt="Modifier la base de données" src="{{ asset("bundles/a2fsofia/images/Update.png") }}" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+            <div class="row">
+                {#ajouter condition roles #}
+                {% include ("A2FSofiaBundle::notes.html.twig") %}
+            </div>
+        </div>
+        
+        
+

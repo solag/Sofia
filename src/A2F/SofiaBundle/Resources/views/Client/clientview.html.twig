@@ -1,0 +1,82 @@
+
+    
+        <div class="row accordionHeader">
+            {% if(app.request.attributes.get('_route') == 'a2fSofia_client_detail') %}
+            <div class="col-xs-1 accordionNeutral">
+             
+            </div>
+            {% endif %}
+             <div class="col-xs-2 accordionLabel">
+                 {{ element.companyName }}
+             </div>
+        {% if element.live %}
+             <div class="col-xs-offset-7 col-xs-1 accordionPicto">
+                 <img alt="Active" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusGreen.png") }}" />
+             </div>
+             <div class="col-xs-1 accordionStatus">
+                 Actif
+             </div>
+        {% else %}
+            <div class="col-xs-offset-8 col-xs-1 accordionPicto">
+                 <img alt="Inactive" class="miniPicto statusPicto" src="{{ asset("bundles/a2fsofia/images/statusRed.png") }}" />
+            </div>
+             <div class="col-xs-1 accordionStatus">
+                 Inactif
+             </div>
+        {% endif %}
+        </div>
+        <div class="row accordionBody">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-11 accordionLine">
+                         <div class="row">
+                            <div class="col-xs-6">
+                                <div class="row">
+                                        <div class="col-xs-12 accordionSummaryHeader">
+                                            Adresse
+                                        </div>
+                                        <div class="col-xs-12 accordionSummaryContent">
+                                            {{ element.address }}, {{element.postCode}} {{ element.town|upper }}
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                 <div class="row">
+                                    
+                                    <div class="col-xs-12 accordionSummaryHeader">
+                                        Téléphone
+                                    </div>
+                                    <div class="col-xs-12 accordionSummaryContent">
+                                        {{ element.phoneNumber }}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+            
+                    <div class="col-xs-1">
+                        <div class="row">
+                            <div class="col-xs-12 toDetailedView">
+                                <a href="#"/>
+                                    <img id="pictoUpdate" class="miniPicto" alt="Modifier le profil de l'entreprise" src="{{ asset("bundles/a2fsofia/images/Update.png") }}" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+            {% if is_granted("ROLE_DBA") %}    
+            <div class="row">
+                {% include ("A2FSofiaBundle::notes.html.twig") %}
+            </div>
+            {% endif %}
+        </div>
+       </div>  
+      </div>  
+        
+   
+
+
+
+

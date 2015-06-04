@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: SOFIA
+    database_user: root
+    database_password: Nantes44!
+    mailer_transport: smtp
+    mailer_host: smtp.gmail.com
+    mailer_user: sofia.lagacherie
+    mailer_password: Grenouille.47
+    locale: fr
+    secret: ThisTokenIsNowSecretSoNoNeedToChangeIt

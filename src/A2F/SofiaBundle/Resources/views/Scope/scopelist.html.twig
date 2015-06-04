@@ -1,0 +1,109 @@
+{% extends ("A2FSofiaBundle::layout.html.twig") %}
+{% block breadcrumbs %}
+    {{parent()}} >  <a href="{{ path("a2fSofia_scope_list", {"id": app.user.client.id, "limit":5}) }}">Périmètre</a>
+{% endblock breadcrumbs %}
+{% block content %}
+    <div class="row">
+       <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div class="row">
+                        <div class="col-xs-11 no-padding">
+                            <div class="col-xs-1 boxPictoHeader">
+                                <img id="pictoBase" class="picto" alt="Bases de données" src="{{ asset("bundles/a2fsofia/images/DB.png") }}" />
+                            </div>
+                            <div class="col-xs-11">
+                                <h3>Bases de données</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 boxPictoAjouterHeader">
+                            <div class="col-xs-12 boxPictoAjouterHeader">
+                                <a href="#">
+                                    <img id="pictoAjouter" class="picto" alt="Nouvelle base de données" src="{{ asset("bundles/a2fsofia/images/Add.png") }}" />
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+            <section class="col-xs-12">
+                {% if dbs|length!=0 %}
+				<div class="accordion">
+                    {% for element in dbs %}
+                        {% include ("A2FSofiaBundle:Scope:scopeview.html.twig") %}
+                    {% endfor %}
+				</div>
+                {% else %}
+                    Vous n'avez aucune base de données enregistrée.
+                {% endif %}
+            </section>
+       </div>
+   </div> 
+    <div class="row">
+            <div class="col-xs-12 fullList">
+                <a href="#">Liste complète</a>
+            </div>
+    </div>             
+                
+                
+    <div class="row">
+       <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div class="row">
+                        <div class="col-xs-11 no-padding">
+                            <div class="col-xs-1 boxPictoHeader">
+                                <img id="pictoBase" class="picto" alt="Serveurs" src="{{ asset("bundles/a2fsofia/images/server.png") }}" />
+                            </div>
+                            <div class="col-xs-11">
+                                <h3>Serveurs</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 boxPictoAjouterHeader">
+                            <div class="col-xs-12 boxPictoAjouterHeader">
+                                <a href="#">
+                                    <img id="pictoAjouter" class="picto" alt="Nouvelle base de données" src="{{ asset("bundles/a2fsofia/images/Add.png") }}" />
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+            <section class="col-xs-12 ">
+                {% if servers|length!=0 %}
+                    <div class="accordion">
+                    {% for element in servers %}
+                        {% include ("A2FSofiaBundle:Scope:scopeview.html.twig") %}
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="row messageVide">
+                        Vous n'avez aucun serveur enregistré.
+                    </div>
+                {% endif %}
+            </section>
+       </div>
+        <div class="row">
+            <div class="col-xs-12 fullList">
+                <a href="#">Liste complète</a>
+            </div>
+        </div>
+   </div> 
+{% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+     <script type="text/javascript">
+    $(document).ready(function() {
+    $( ".selector" ).accordion();
+
+    $( ".accordion" ).accordion();
+    
+});
+</script>
+
+{% endblock javascripts %}

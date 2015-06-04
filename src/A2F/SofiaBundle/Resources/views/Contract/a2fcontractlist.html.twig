@@ -1,0 +1,23 @@
+{# liste des contrats affichés dans la landing page A2F #}
+{#{% for contract in contracts %}#}
+<div class="col-xs-12">
+    {% include ("A2FSofiaBundle:Contract:contractsectionheader.html.twig") %}
+</div>
+<div class="row">
+    <section class="col-xs-12 " >
+        <div class="accordion">
+        {% for contract in contracts %}
+            {% include("A2FSofiaBundle:Contract:a2fcontractview.html.twig") %}
+        {% endfor %}
+        </div>
+    </section>
+</div> 
+ <div class="row">
+    <div class="col-xs-12 fullList">
+        <a href="#">Liste complète</a>
+    </div>
+</div>
+
+
+        
+{#{% endfor %}#}

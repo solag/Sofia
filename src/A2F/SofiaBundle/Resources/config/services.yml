@@ -1,0 +1,9 @@
+parameters:
+    A2FSofia.doctrine.prefix: GT_
+
+services:
+    SofiaBundle.doctrineprefix_subscriber:
+        class: A2F\SofiaBundle\Subscriber\TablePrefixSubscriber
+        arguments: [%A2FSofia.doctrine.prefix%]
+        tags:
+            - { name: doctrine.event_subscriber }

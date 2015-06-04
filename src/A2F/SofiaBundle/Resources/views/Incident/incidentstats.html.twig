@@ -1,0 +1,24 @@
+
+    <section class="col-xs-12">
+        {% if statuses!=0 %}
+        <ul>
+            {% for status in statuses %}
+            <li class="ligneListe">
+                <div class="col-xs-6 statsColonneIncidents">
+                Nouveau(x)
+                </div>
+                <div class="col-xs-6 statsColonneNombre">
+                    {{ status }}
+                </div>
+            </li>
+            {% endfor %}
+           
+        </ul>
+       {% else %}
+            <div class="row messageVide">
+                Vous n'avez aucun incident.
+            </div>
+        {% endif %}
+    </section>
+        
+

@@ -1,0 +1,35 @@
+{% extends ("A2FSofiaBundle::layout.html.twig") %}
+
+{% block content %}
+    <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 sectionHeader">
+                    <div class="row">
+                        <div class="col-xs-11 no-padding">
+                            <div class="col-xs-1 boxPictoHeader boxPictoHeaderHorizontal">
+                                <img id="pictoContract" class="picto" alt="Contrats" src="{{ asset("bundles/a2fsofia/images/Contract.png") }}" />
+                            </div>
+                            <div class="col-xs-11">
+                                <h3>Types de contrats</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 boxPictoAjouterHeader">
+                            <div class="col-xs-12 boxPictoAjouterHeader">
+                                <a href="#">
+                                    <img id="pictoAjouter" class="picto" alt="Nouveau type de contrat" src="{{ asset("bundles/a2fsofia/images/Add.png") }}" />
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+           <section class="col-xs-12">
+                   {#{% for element in elements %}#}
+                       {% include ("A2FSofiaBundle:ContractType:contracttypeview.html.twig") %}
+                   {#{% endfor %}#}
+            </section></div>
+       </div>
+   </div>    
+{% endblock content %}

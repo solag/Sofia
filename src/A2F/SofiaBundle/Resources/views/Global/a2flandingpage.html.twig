@@ -1,0 +1,29 @@
+{% extends ("A2FSofiaBundle::layout.html.twig") %}
+
+{% block breadcrumbs %}
+    <a href="{{path("a2fSofia_a2flandingpage")}}">Accueil</a>
+{% endblock breadcrumbs %}
+
+{% block content %}
+ <div class="row">
+    
+    {% include("A2FSofiaBundle:Contract:a2fcontractlist.html.twig") %}
+    
+    {% include("A2FSofiaBundle:Incident:incidentlist.html.twig") %}  
+</div>
+            
+{% endblock content %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+     <script type="text/javascript">
+    $(document).ready(function() {
+    $( ".selector" ).accordion();
+
+    $( ".accordion" ).accordion();
+    
+});
+</script>
+
+{% endblock javascripts %}

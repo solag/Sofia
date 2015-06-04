@@ -1,0 +1,195 @@
+a2fSofia_dispatch:
+    path:   /
+    defaults: { _controller: A2FSofiaBundle:Default:dispatch }
+    requirements:
+        _locale: fr
+        
+a2fSofia_a2flandingpage:
+    path:     /a2f
+    defaults: { _controller: A2FSofiaBundle:Default:indexA2f }
+    requirements:
+        _locale: fr
+        
+a2fSofia_contracttype_update:
+    path:     /contracttype/update
+    defaults: { _controller: A2FSofiaBundle:ContractType:update }
+    requirements:
+        _locale: fr
+        
+a2fSofia_contracttype_list:
+    path:     /contracttype/list
+    defaults: { _controller: A2FSofiaBundle:ContractType:list }
+    requirements:
+        _locale: fr
+        
+a2fSofia_clientlandingpage:
+    path:     /client/{id}
+    defaults: { _controller: A2FSofiaBundle:Default:indexClient }
+    requirements:
+        _locale: fr
+        id: \d+
+        
+
+a2fSofia_user_list:
+    path:     /user/list/{id}
+    defaults: { _controller: A2FSofiaBundle:User:list, id:null }
+    requirements:
+        _locale: fr
+        id: \d+
+        
+a2fSofia_user_view:
+    path:     /user/view/{id}
+    defaults: { _controller: A2FSofiaBundle:User:view, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_user_update:
+    path:     /user/update/{id}
+    defaults: { _controller: A2FSofiaBundle:User:update, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_user_remove:
+    path:     /user/remove/{id}
+    defaults: { _controller: A2FSofiaBundle:User:remove, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_user_add:
+    path:     /user/add
+    defaults: { _controller: A2FSofiaBundle:User:add }
+    requirements:
+        _locale: fr
+        
+a2fSofia_scope_list:
+    path:     /scope/list/{id}
+    defaults: { _controller: A2FSofiaBundle:Scope:list, id:null }
+    requirements:
+        _locale: fr
+        id: \d+
+        
+a2fSofia_scope_view:
+    path:     /scope/view/{id}
+    defaults: { _controller: A2FSofiaBundle:Scope:view, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+        
+a2fSofia_scope_update:
+    path:     /scope/update/{id}
+    defaults: { _controller: A2FSofiaBundle:Scope:update, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_scope_remove:
+    path:     /scope/remove/{id}
+    defaults: { _controller: A2FSofiaBundle:Scope:remove, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_scope_add:
+    path:     /scope/add
+    defaults: { _controller: A2FSofiaBundle:Scope:add }
+    requirements:
+        _locale: fr
+        
+a2fSofia_client_list:
+    path:     /client/list
+    defaults: { _controller: A2FSofiaBundle:Client:list }
+    requirements:
+        _locale: fr
+        
+a2fSofia_scope_view:
+    path:     /scope/view/{id}
+    defaults: { _controller: A2FSofiaBundle:Scope:view, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+        
+a2fSofia_client_update:
+    path:     /client/update/{id}
+    defaults: { _controller: A2FSofiaBundle:Client:update, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_client_remove:
+    path:     /scope/remove/{id}
+    defaults: { _controller: A2FSofiaBundle:Client:remove, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_client_add:
+    path:     /client/add
+    defaults: { _controller: A2FSofiaBundle:Client:add }
+    requirements:
+        _locale: fr
+ 
+a2fSofia_incident_list:
+    path:     /incident/list/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:list, id:null }
+    requirements:
+        _locale: fr
+        id: \d+
+        
+a2fSofia_incident_full_list:
+    path:     /incident/fulllist/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:list, id:null}
+    requirements:
+        _locale: fr
+        id: \d+
+        
+a2fSofia_incident_view:
+    path:     /incident/view/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:view, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+        
+a2fSofia_incident_update:
+    path:     /incident/update/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:update, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+    
+a2fSofia_incident_remove:
+    path:     /incident/remove/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:remove, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+
+
+a2fSofia_incident_add:
+    path:     /incident/add
+    defaults: { _controller: A2FSofiaBundle:Incident:add }
+    requirements:
+        _locale: fr
+ 
+a2fSofia_incident_assign:
+    path:     /incident/assign/{incidentId}
+    defaults: { _controller: A2FSofiaBundle:Incident:assign }
+    requirements:
+        _locale: fr
+        incidentId: \d+
+       
+a2fSofia_client_detail:
+    path:     /client/detail/{type}/{id}
+    defaults: { _controller: A2FSofiaBundle:Client:detail, id: 0001 }
+    requirements:
+        id: \d+
+        _locale: fr
+        
+a2fSofia_user_detail:
+    path:     /user/detail/{type}/{id}
+    defaults: { _controller: A2FSofiaBundle:User:detail}
+    requirements:
+        _locale: fr
+        id: \d+

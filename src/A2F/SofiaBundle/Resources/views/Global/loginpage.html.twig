@@ -1,0 +1,30 @@
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+    
+    <section class="col-xs-12" id="loginSection">
+        <form action="{{ path("login_check") }}" method="post" id="loginForm">
+            <div class="row">
+                <div class="col-xs-12 formLine">
+                    <label class="col-xs-offset-4 col-xs-2 loginFormLabel" for="username">Login</label>
+                    <input class="col-xs-2" type="text" id="username" name="_username" value="{{ last_username }}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 formLine">
+                    <label class="col-xs-offset-4 col-xs-2 loginFormLabel" for="password">Mot de passe</label>
+                    <input class="col-xs-2" type="password" id="password" name="_password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 formLine ">
+                    <input class="btn col-xs-offset-6 col-xs-1" type="submit" value="Connexion" id="boutonConnexion"/>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock content %}
