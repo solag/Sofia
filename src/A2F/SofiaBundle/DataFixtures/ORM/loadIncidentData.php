@@ -79,7 +79,7 @@ Class LoadINCIDENT extends AbstractFixture implements OrderedFixtureInterface
                 ->setIdentifiedIssue("Donec gravida posuere felis, et varius dui.")
                 ->setNotes("Duis tincidunt at odio sit amet gravida. Vestibulum porta elit vel risus pharetra vulputate. Suspendisse potenti.")
                 ->setRequester($this->getReference("req3"))
-                ->setDatabase($this->getReference("db3"))
+                ->setDatabase($this->getReference("db11"))
                 ->setSolution("Duis ultrices diam non sagittis iaculis. Nunc nulla erat, auctor sed tortor non, tincidunt vulputate lectus.")
                 ->setSpentCredit(90);
            $manager->persist($inc6);

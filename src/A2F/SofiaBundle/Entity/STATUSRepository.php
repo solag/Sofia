@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class STATUSRepository extends EntityRepository
 {
+    
+     public function findOneStatusByName($name)
+        {
+            return $this->createQueryBuilder("s")
+                        ->where("s.name =:name")
+                        ->setParameter("name", $name)
+                        ->getQuery()
+                        ->getOneOrNullResult();
+        }
 }

@@ -107,6 +107,42 @@ Class LoadDATABASE extends AbstractFixture implements OrderedFixtureInterface
                 $manager->persist($db8);
                 $this->addReference("db8", $db8);
                 
+                $db9 = new DATABASE();
+                $db9->setLive(true)
+                    ->setName("MaBase9")
+                    ->setSize("32Go")
+                    ->setServer($this->getReference("serv4"))
+                    ->setNotes("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit iaculis risus tempus, in vulputate sem bibendum. Donec vestibulum dolor eu imperdiet venenatis. ")
+                    ->setClient($this->getReference("clt4"))
+                    ->setCriticality($this->getReference("crit3"))
+                    ->setDbms($this->getReference("dbms2"));
+                $manager->persist($db9);
+                $this->addReference("db9", $db9);
+                
+                $db10 = new DATABASE();
+                $db10->setLive(true)
+                    ->setName("MaBase10")
+                    ->setSize("32Go")
+                    ->setServer($this->getReference("serv4"))
+                    ->setNotes("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit iaculis risus tempus, in vulputate sem bibendum. Donec vestibulum dolor eu imperdiet venenatis. ")
+                    ->setClient($this->getReference("clt4"))
+                    ->setCriticality($this->getReference("crit3"))
+                    ->setDbms($this->getReference("dbms2"));
+                $manager->persist($db10);
+                $this->addReference("db10", $db10);
+                
+                $db11 = new DATABASE();
+                $db11->setLive(true)
+                    ->setName("MaBase11")
+                    ->setSize("32Go")
+                    ->setServer($this->getReference("serv4"))
+                    ->setNotes("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida velit iaculis risus tempus, in vulputate sem bibendum. Donec vestibulum dolor eu imperdiet venenatis. ")
+                    ->setClient($this->getReference("clt4"))
+                    ->setCriticality($this->getReference("crit3"))
+                    ->setDbms($this->getReference("dbms2"));
+                $manager->persist($db11);
+                $this->addReference("db11", $db11);
+                
                 $manager->flush();
             }
             

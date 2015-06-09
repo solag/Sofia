@@ -1,1 +1,16 @@
+{% extends "A2FSofiaBundle::layout.html.twig" %}
 
+{% block content %}
+<div class="row">
+        {% include ("A2FSofiaBundle:Incident:incidentheader.html.twig") %}
+        
+        <div class="row">
+            <section class="col-xs-12">
+                <div class="">
+                     {% include ("A2FSofiaBundle:Incident:incidentview.html.twig") %} 
+                </div>
+            </section>
+        </div>
+        
+    </div>
+{% endblock content %}

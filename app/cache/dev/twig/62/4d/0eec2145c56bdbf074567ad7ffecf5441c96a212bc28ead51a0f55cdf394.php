@@ -18,7 +18,7 @@ class __TwigTemplate_624d0eec2145c56bdbf074567ad7ffecf5441c96a212bc28ead51a0f55c
         // line 1
         echo "
     <section class=\"col-xs-12\">
-        ";
+       ";
         // line 3
         if (((isset($context["statuses"]) ? $context["statuses"] : $this->getContext($context, "statuses")) != 0)) {
             // line 4

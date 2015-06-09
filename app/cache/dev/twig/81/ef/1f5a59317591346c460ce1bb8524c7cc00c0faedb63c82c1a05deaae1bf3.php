@@ -18,18 +18,28 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
         // line 1
         echo "
          <div class=\"row accordionHeader\">
-             <div class=\"col-xs-2 accordionLabel\">
+             ";
+        // line 3
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "a2fSofia_incident_detail")) {
+            // line 4
+            echo "            <div class=\"col-xs-1 accordionNeutral\">
+             
+            </div>
+            ";
+        }
+        // line 8
+        echo "             <div class=\"col-xs-2 accordionLabel\">
                  Incident ";
-        // line 4
+        // line 9
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "id", array()), "html", null, true);
         echo "
              </div>
-             <div class=\"col-xs-8\">
+             <div class=\"col-xs-7\">
                 
                  ";
-        // line 8
+        // line 13
         if ((twig_length_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "database", array())) != 0)) {
-            // line 9
+            // line 14
             echo "                     ";
             if ($this->env->getExtension('security')->isGranted("ROLE_DBA")) {
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "database", array()), "client", array()), "companyName", array()), "html", null, true);
@@ -40,11 +50,11 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
                     
                  ";
         } else {
-            // line 12
+            // line 17
             echo "                    
                            
                         ";
-            // line 14
+            // line 19
             if ($this->env->getExtension('security')->isGranted("ROLE_DBA")) {
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "server", array()), "client", array()), "companyName", array()), "html", null, true);
                 echo " - ";
@@ -55,59 +65,61 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
                        
                 ";
         }
-        // line 17
+        // line 22
         echo "             </div>
+             
+              
                 
-           ";
-        // line 27
-        echo "             ";
-        // line 47
+          ";
+        // line 59
         echo "        </div>
       <div class=\"row accordionBody\">
-            <div class=\"col-xs-6 accordionLine \">
+          <div class=\"col-xs-12 accordionLine\">
+                <div class=\"row\">
+            <div class=\"col-xs-6  \">
                 <div class=\"row\">
                     <div class=\"col-xs-12 accordionSummaryHeader\">
                         Date de la demande
                     </div>
                     <div class=\"col-xs-12 accordionSummaryContent\">
                         ";
-        // line 55
+        // line 69
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "logDate", array()), "d/m/Y"), "html", null, true);
         echo "
                     </div>
                 </div>
             </div>
-            <div class=\"col-xs-6 accordionLine\">
+            <div class=\"col-xs-6 \">
                  <div class=\"row\">
                     <div class=\"col-xs-12 accordionSummaryHeader\">
                         Date de prise en charge
                     </div>
                     <div class=\"col-xs-12 accordionSummaryContent\">
                         ";
-        // line 65
+        // line 79
         if ((null === $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "acknowledgeDate", array()))) {
-            // line 66
+            // line 80
             echo "                            Votre incident est en attente de prise en charge.
                         ";
         } else {
-            // line 68
+            // line 82
             echo "                            ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "acknowledgeDate", array()), "d/m/Y"), "html", null, true);
             echo "
                         ";
         }
-        // line 70
+        // line 84
         echo "                    </div>
                 </div>
             </div>
-            <div class=\"col-xs-6 accordionLine\">
+            <div class=\"col-xs-6 \">
                  <div class=\"row\">
                     <div class=\"col-xs-12 accordionSummaryHeader\">
                         Demandeur
                     </div>
                     <div class=\"col-xs-12 accordionSummaryContent\">
                         ";
-        // line 79
+        // line 93
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "requester", array()), "firstName", array()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, twig_upper_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "requester", array()), "lastName", array())), "html", null, true);
@@ -115,16 +127,16 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
                     </div>
                 </div>
             </div>
-            <div class=\"col-xs-6 accordionLine\">
+            <div class=\"col-xs-6 \">
                  <div class=\"row\">
                     <div class=\"col-xs-12 accordionSummaryHeader\">
                         Intervenant
                     </div>
                     <div class=\"col-xs-12 accordionSummaryContent\">
                         ";
-        // line 89
+        // line 103
         if ((twig_length_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "dba", array())) != 0)) {
-            // line 90
+            // line 104
             echo "                        ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "dba", array()), "firstName", array()), "html", null, true);
             echo " ";
@@ -132,56 +144,95 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
             echo "
                         ";
         } else {
-            // line 92
+            // line 106
             echo "                            Votre incident est en attente de prise en charge.
                         ";
         }
-        // line 94
+        // line 108
         echo "                            
                     </div>
                 </div>
-            </div>
-           <div class=\"col-xs-6 accordionLine\">
+            </div> 
+            
+            ";
+        // line 113
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "a2fSofia_incident_detail")) {
+            // line 114
+            echo "           <div class=\"col-xs-6\">
               
                     <div class=\"row\">
                         <div class=\"col-xs-12 accordionSummaryHeader\">
                             Description
                         </div>
                         <div class=\"col-xs-12 accordionSummaryContent\">
+                           
                             ";
-        // line 105
-        echo twig_escape_filter($this->env, twig_slice($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "description", array()), 0, 90), "html", null, true);
-        echo "...
+            // line 122
+            echo twig_escape_filter($this->env, twig_slice($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "description", array()), 0, 90), "html", null, true);
+            echo "...
+                            
                         </div>
                     </div>
             </div>
-            <div class=\"col-xs-6 accordionLine\">
+            ";
+        } else {
+            // line 128
+            echo "                <div class=\"col-xs-12 accordionLine\">
+              
+                    <div class=\"row accordionSummaryHeader\">
+                            Description
+                    </div>
+                    <div class=\"row accordionSummaryContent\">
+
+                        ";
+            // line 135
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "description", array()), "html", null, true);
+            echo "
+
+                    </div>
+                </div>
+            ";
+        }
+        // line 140
+        echo "           
+                            
+            <div class=\"col-xs-6 \">
                 <div class=\"row\">
                     ";
-        // line 111
-        if ($this->env->getExtension('security')->isGranted("ROLE_DBA")) {
-            // line 112
+        // line 144
+        if (($this->env->getExtension('security')->isGranted("ROLE_DBA") && ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "a2fSofia_incident_detail"))) {
+            // line 145
             echo "                    <div class=\"col-xs-9 toDetailedView\">
                         <a class=\"btn\" href=\"";
-            // line 113
+            // line 146
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("a2fSofia_incident_assign", array("incidentId" => $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "id", array()))), "html", null, true);
             echo "\">Prendre en charge</a>
                     </div>
                     <div class=\"col-xs-3 toDetailedView\">
-                        <a class=\"btn\" href=\"#\">Fiche complète</a>
+                        <a class=\"btn\" href=\"";
+            // line 149
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("a2fSofia_incident_detail", array("id" => $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "id", array()))), "html", null, true);
+            echo "\">Fiche complète</a>
                     </div>
                     ";
-        } else {
-            // line 119
+        } elseif (($this->getAttribute($this->getAttribute($this->getAttribute(        // line 151
+(isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") != "a2fSofia_incident_detail")) {
+            // line 152
             echo "                        <div class=\"col-xs-offset-9 col-xs-3 toDetailedView\">
-                        <a class=\"btn\" href=\"#\">Fiche complète</a>
+                        <a class=\"btn\" href=\"";
+            // line 153
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("a2fSofia_incident_detail", array("id" => $this->getAttribute((isset($context["element"]) ? $context["element"] : $this->getContext($context, "element")), "id", array()))), "html", null, true);
+            echo "\">Fiche complète</a>
                     </div>
                     ";
         }
-        // line 123
+        // line 156
         echo "                </div>
             </div>
-        </div>
+                 </div>
+                </div>
+          </div>
+   
    
        
   
@@ -206,6 +257,6 @@ class __TwigTemplate_81ef1f5a59317591346c460ce1bb8524c7cc00c0faedb63c82c1a05deaa
 
     public function getDebugInfo()
     {
-        return array (  182 => 123,  176 => 119,  167 => 113,  164 => 112,  162 => 111,  153 => 105,  140 => 94,  136 => 92,  128 => 90,  126 => 89,  111 => 79,  100 => 70,  94 => 68,  90 => 66,  88 => 65,  75 => 55,  65 => 47,  63 => 27,  59 => 17,  48 => 14,  44 => 12,  33 => 9,  31 => 8,  24 => 4,  19 => 1,);
+        return array (  230 => 156,  224 => 153,  221 => 152,  219 => 151,  214 => 149,  208 => 146,  205 => 145,  203 => 144,  197 => 140,  189 => 135,  180 => 128,  171 => 122,  161 => 114,  159 => 113,  152 => 108,  148 => 106,  140 => 104,  138 => 103,  123 => 93,  112 => 84,  106 => 82,  102 => 80,  100 => 79,  87 => 69,  75 => 59,  69 => 22,  58 => 19,  54 => 17,  43 => 14,  41 => 13,  34 => 9,  31 => 8,  25 => 4,  23 => 3,  19 => 1,);
     }
 }

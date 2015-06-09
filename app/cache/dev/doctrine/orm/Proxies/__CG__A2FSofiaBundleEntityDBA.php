@@ -64,10 +64,10 @@ class DBA extends \A2F\SofiaBundle\Entity\DBA implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DBA' . "\0" . 'trigraph');
+            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DBA' . "\0" . 'trigraph', 'lastName', 'firstName', 'landLinePhoneNumber', 'mobilePhoneNumber', 'email', 'roles', 'salt', 'username', 'password', 'live');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DBA' . "\0" . 'trigraph');
+        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DBA' . "\0" . 'trigraph', 'lastName', 'firstName', 'landLinePhoneNumber', 'mobilePhoneNumber', 'email', 'roles', 'salt', 'username', 'password', 'live');
     }
 
     /**

@@ -14,6 +14,7 @@ class DATABASERepository extends EntityRepository
 {
     public function getAllDataBasesByClient($id)
     {
+        
         return $this->createQueryBuilder("db")
                         ->addSelect("clt")
                         ->addSelect("ser")

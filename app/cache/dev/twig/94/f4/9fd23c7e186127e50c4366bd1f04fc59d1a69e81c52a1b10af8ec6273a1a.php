@@ -34,7 +34,7 @@ class __TwigTemplate_94f49fd23c7e186127e50c4366bd1f04fc59d1a69e81c52a1b10af8ec62
         <li class=\"col-xs-2\"> 
             <a href=\"";
         // line 11
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("a2fSofia_client_detail", array("id" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "client", array()), "id", array()), "type" => "REQUESTER")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("a2fSofia_client_detail", array("type" => "REQUESTER", "id" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "client", array()), "id", array()))), "html", null, true);
         echo "#userHeader\">Demandeurs</a>
         </li>  
         <li class=\"col-xs-2\"> 

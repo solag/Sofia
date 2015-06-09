@@ -64,10 +64,10 @@ class SERVER extends \A2F\SofiaBundle\Entity\SERVER implements \Doctrine\ORM\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'serverType', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'os', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'dbs', 'name');
+            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'serverType', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'os', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'dbs', 'id', 'name', 'size', 'notes', 'live', 'criticality', 'client');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'serverType', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'os', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'dbs', 'name');
+        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'serverType', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'os', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\SERVER' . "\0" . 'dbs', 'id', 'name', 'size', 'notes', 'live', 'criticality', 'client');
     }
 
     /**

@@ -8,7 +8,7 @@
             <a href="{{path("a2fSofia_incident_full_list", {"id": app.user.client.id})}}">Incidents</a>
         </li>
         <li class="col-xs-2"> 
-            <a href="{{ path("a2fSofia_client_detail", {"id": app.user.client.id, "type": "REQUESTER"} ) }}#userHeader">Demandeurs</a>
+            <a href="{{ path("a2fSofia_client_detail", {"type": "REQUESTER", "id": app.user.client.id} ) }}#userHeader">Demandeurs</a>
         </li>  
         <li class="col-xs-2"> 
             <a href="{{ path("a2fSofia_scope_list", {"id": app.user.client.id, "limit":5}) }}">Périmètre</a>

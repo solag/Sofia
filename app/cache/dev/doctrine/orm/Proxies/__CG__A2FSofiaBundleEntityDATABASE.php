@@ -64,10 +64,10 @@ class DATABASE extends \A2F\SofiaBundle\Entity\DATABASE implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'dbms', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'server', 'name');
+            return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'dbms', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'server', 'id', 'name', 'size', 'notes', 'live', 'criticality', 'client');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'dbms', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'server', 'name');
+        return array('__isInitialized__', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'dbms', '' . "\0" . 'A2F\\SofiaBundle\\Entity\\DATABASE' . "\0" . 'server', 'id', 'name', 'size', 'notes', 'live', 'criticality', 'client');
     }
 
     /**

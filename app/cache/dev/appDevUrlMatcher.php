@@ -288,8 +288,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // a2fSofia_user_detail
-        if (0 === strpos($pathinfo, '/user/detail') && preg_match('#^/user/detail/(?P<type>[^/]++)/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/user/detail') && preg_match('#^/user/detail/(?P<id>\\d+)/(?P<type>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'a2fSofia_user_detail')), array (  '_controller' => 'A2F\\SofiaBundle\\Controller\\UserController::detailAction',));
+        }
+
+        // a2fSofia_incident_detail
+        if (0 === strpos($pathinfo, '/incident/detail') && preg_match('#^/incident/detail/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'a2fSofia_incident_detail')), array (  '_controller' => 'A2F\\SofiaBundle\\Controller\\IncidentController::detailAction',));
         }
 
         if (0 === strpos($pathinfo, '/log')) {

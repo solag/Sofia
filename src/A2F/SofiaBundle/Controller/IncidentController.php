@@ -3,6 +3,7 @@
 namespace A2F\SofiaBundle\Controller;
 
 use A2F\SofiaBundle\Entity\INCIDENT;
+use A2F\SofiaBundle\Entity\INCIDENTSTATUSCHANGE;
 use A2F\SofiaBundle\Entity\NOTIFICATION;
 use A2F\SofiaBundle\Form\INCIDENTType;
 use DateTime;
@@ -21,7 +22,8 @@ Class IncidentController extends Controller
                 $incidentRepo = $this->getDoctrine()
                                      ->getManager()
                                      ->getRepository("A2FSofiaBundle:INCIDENT");
-                             
+                    
+            
                 
                     if(isset ($id))
                     {
@@ -37,7 +39,8 @@ Class IncidentController extends Controller
                         $elements = $incidentRepo->findAllIncidents(null);
                     }  
                         
-                        
+                    
+                     
                 if(isset($limit))
                     {
                         return $this->render("A2FSofiaBundle:Incident:incidentlist.html.twig", array("incidentsFive"=>$elements5, "incidents"=>$elements));
@@ -49,9 +52,16 @@ Class IncidentController extends Controller
                 
             }
             
-        public function viewAction($id)
+        public function detailAction($id)
             {
-                return new Response("Profil de l'incident " . $id);
+                $incidentRepo = $this->getDoctrine()
+                                     ->getManager()
+                                     ->getRepository("A2FSofiaBundle:INCIDENT");
+                
+                
+                $incident = $incidentRepo->FindOneIncidentById($id);
+                
+                return $this->render("A2FSofiaBundle:Incident:incidentdetail.html.twig", array("element"=>$incident));
             }
             
         public function updateAction($id)
@@ -66,6 +76,12 @@ Class IncidentController extends Controller
             
         public function addAction(Request $request)
             {
+                $statusRepo = $this->getDoctrine()
+                                    ->getManager()
+                                    ->getRepository("A2FSofiaBundle:STATUS");
+                
+                $status = $statusRepo->findOneStatusByName("Nouveau");
+                
                 $incident = new INCIDENT();
                 
                 $user = $this->getUser()->getClient()->getId();
@@ -82,6 +98,14 @@ Class IncidentController extends Controller
                         $em = $this->getDoctrine()->getManager(); 
                         if($incident->getId() === null) 
                             {
+                                $statusT = new INCIDENTSTATUSCHANGE();
+                        
+                                $statusT->setMessage("L'incident a bien été créé.")
+                                        ->setIncident($incident)
+                                        ->setStatus($status);
+                                $em->persist($statusT);
+                                
+                                $incident->addStatusT($statusT);
                                 $em->persist($incident);
                             }
                         $em->flush();

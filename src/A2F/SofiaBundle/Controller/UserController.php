@@ -10,7 +10,7 @@ use A2F\SofiaBundle\Entity\REQUESTER;
 
 Class UserController extends Controller
     {
-        public function listAction($id=null)
+        public function listAction($type, $id=null)
             {
                 if(isset($id))  
                     {
@@ -18,9 +18,9 @@ Class UserController extends Controller
                                                  ->getManager()
                                                  ->getRepository("A2FSofiaBundle:REQUESTER");
 
-                        $requeters = $requesterRepo->findAllRequestersByClient($id);
-                        $type = "REQUESTER";
-                        return $this->render('A2FSofiaBundle:User:userlist.html.twig', array("elements"=>$requeters, "type"=>$type));
+                        $resqueters = $requesterRepo->findAllRequestersByClient($id);
+                        
+                        return $this->render('A2FSofiaBundle:User:userlist.html.twig', array("elements"=>$resqueters, "type"=>$type));
                     }
             }
             

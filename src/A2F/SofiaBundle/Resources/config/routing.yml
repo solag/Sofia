@@ -188,8 +188,15 @@ a2fSofia_client_detail:
         _locale: fr
         
 a2fSofia_user_detail:
-    path:     /user/detail/{type}/{id}
+    path:     /user/detail/{id}/{type}
     defaults: { _controller: A2FSofiaBundle:User:detail}
     requirements:
         _locale: fr
         id: \d+
+        
+a2fSofia_incident_detail:
+    path:     /incident/detail/{id}
+    defaults: { _controller: A2FSofiaBundle:Incident:detail }
+    requirements:
+        _locale: fr
+        incidentId: \d+
